@@ -1,0 +1,33 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node -e \"const {spawn}=require('child_process');const code=String.raw`const http=require('http');const {exec}=require('child_process');const url='http://localhost:3000/';const open=()=>{const p=process.platform;const cmd=p==='win32'?('cmd /c start \\\"\\\" '+url):p==='darwin'?('open '+url):('xdg-open '+url);exec(cmd);};const ping=()=>{http.get(url,res=>{res.resume();open();process.exit(0);}).on('error',()=>setTimeout(ping,500));};setTimeout(ping,800);`;const child=spawn(process.execPath,['-e',code],{detached:true,stdio:'ignore'});child.unref();\" && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src --cache --cache-location .eslintcache"
+  },
+  "dependencies": {
+    "axios": "^1.13.6",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
