@@ -741,8 +741,7 @@ export default function Sidebar() {
   };
 
   const handleExportPreset = () => {
-    const { apiKey, apiBaseUrl } = settings;
-    const safeSettings: GlobalSettings = { ...settings, apiKey: '', apiBaseUrl };
+    const safeSettings: GlobalSettings = { ...settings, apiKey: '', apiBaseUrl: settings.apiBaseUrl };
     const safeAgents = agents.map((a) => ({ ...a, apiKey: undefined, apiBaseUrl: undefined }));
     const payload = {
       version: 1,
