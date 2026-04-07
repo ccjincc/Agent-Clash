@@ -1,4 +1,6 @@
-# Agent-Clash
+﻿# Agent-Clash
+
+[中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Deutsch](README.de.md)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Frontend](https://img.shields.io/badge/frontend-Next.js-black)](frontend/)
@@ -189,4 +191,5 @@ python -m compileall app
 ```
 
 贡献方式请看 [CONTRIBUTING.md](CONTRIBUTING.md)。
+
 

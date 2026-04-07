@@ -2,9 +2,9 @@
 
 [中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Deutsch](README.de.md)
 
-后端工程在 `backend/` 目录，提供 API（SSE 流式输出）并使用 SQLite 做本地持久化。
+백엔드는 `backend/` 디렉터리에 있으며, SSE 스트리밍 API 를 제공하고 SQLite 로 로컬 영속화를 수행합니다.
 
-## 启动
+## 실행
 
 ```bash
 cd backend
@@ -14,9 +14,9 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
 ```
 
-健康检查：`GET /health`
+헬스 체크: `GET /health`
 
-## 环境变量
+## 환경 변수
 
-- `UPSTREAM_TIMEOUT_SECONDS`：上游模型 API 超时（秒），默认 120
-- `NEXT_PUBLIC_BACKEND_URL`：前端可通过该变量指向后端地址（默认 `http://127.0.0.1:8001`）
+- `UPSTREAM_TIMEOUT_SECONDS`: 업스트림 모델 API 타임아웃(초), 기본값 `120`
+- `NEXT_PUBLIC_BACKEND_URL`: 프런트엔드에서 사용하는 백엔드 URL, 기본값 `http://127.0.0.1:8001`
